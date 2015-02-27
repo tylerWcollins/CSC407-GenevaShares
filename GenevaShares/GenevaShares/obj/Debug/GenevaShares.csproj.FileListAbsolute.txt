@@ -24,3 +24,32 @@ C:\Users\taylorj4\Desktop\projects\GenevaShares\GenevaShares\bin\Newtonsoft.Json
 C:\Users\taylorj4\Desktop\projects\GenevaShares\GenevaShares\obj\Debug\GenevaShares.dll
 C:\Users\taylorj4\Desktop\projects\GenevaShares\GenevaShares\obj\Debug\GenevaShares.pdb
 C:\Users\taylorj4\Desktop\projects\GenevaShares\GenevaShares\obj\Debug\GenevaShares.csprojResolveAssemblyReference.cache
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\GenevaShares.dll.config
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\GenevaShares.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\GenevaShares.pdb
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\Antlr3.Runtime.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\Newtonsoft.Json.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.Helpers.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.Mvc.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.Optimization.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.Razor.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.WebPages.Deployment.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.WebPages.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.WebPages.Razor.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\WebGrease.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.Helpers.xml
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.Mvc.xml
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.Optimization.xml
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.Razor.xml
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.WebPages.xml
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.WebPages.Deployment.xml
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\System.Web.WebPages.Razor.xml
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\Antlr3.Runtime.pdb
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\Newtonsoft.Json.xml
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\obj\Debug\GenevaShares.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\obj\Debug\GenevaShares.pdb
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\EntityFramework.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\EntityFramework.SqlServer.dll
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\EntityFramework.xml
+C:\Users\taylorj4\Desktop\Projects - Practice\GenevaShares\GenevaShares\bin\EntityFramework.SqlServer.xml
