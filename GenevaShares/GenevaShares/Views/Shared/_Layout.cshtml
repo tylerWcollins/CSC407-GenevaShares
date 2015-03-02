@@ -18,27 +18,27 @@
                 </button>
                 @Html.ActionLink("Geneva Shares", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            @if (Request.IsAuthenticated)
-            {
-                <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                </ul>
+
+                @if (Request.IsAuthenticated)
+                {
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">@User.Identity.Name</a></li>
                         <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
                     </ul>
-                </div>
-            }
-            else
-            {
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    </ul>
+                }
+                else
+                {
                     <ul class="nav navbar-nav navbar-right">
                         <li>@Html.ActionLink("Register", "Register", "Account")</li>
                         <li>@Html.ActionLink("Login", "Login", "Account")</li>
                     </ul>
-                </div>
-            }
+                }
+
+            </div>
         </div>
     </div>
     <div class="container body-content">

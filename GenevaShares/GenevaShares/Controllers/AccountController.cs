@@ -12,11 +12,12 @@ namespace GenevaShares.Controllers
     public class AccountController : Controller
     {
         private IUserService userService;
-        
+
         public AccountController()
         {
-            this.userService = new UserService(new Encryptor());
+            this.userService = new UserService();
         }
+
 
         [HttpGet]
         public ActionResult Login()
@@ -27,7 +28,7 @@ namespace GenevaShares.Controllers
         [HttpPost]
         public ActionResult Login(LoginViewModel model)
         {
-            var isAuthenticated = this.userService.Authenticate(model.Username, model.Password);
+            bool isAuthenticated = this.userService.Authenticate(model.Username, model.Password);
 
             if (isAuthenticated)
             {
@@ -37,7 +38,8 @@ namespace GenevaShares.Controllers
             else
             {
                 this.ModelState.AddModelError("", "Invalid username or password");
-                return View();
+
+                return View(model);
             }
         }
 
@@ -56,25 +58,20 @@ namespace GenevaShares.Controllers
         [HttpPost]
         public ActionResult Register(User user)
         {
-
-            bool exists = this.userService.Exists(user.Username);
-            if (exists)
-            {
-                this.ModelState.AddModelError("", "Username already exists");
-                return View();
-            }
-
             try
             {
                 this.userService.Register(user);
             }
             catch (Exception ex)
             {
-                this.ModelState.AddModelError("", "An error occured. Please try again later");
+                this.ModelState.AddModelError("", "An error has occured");
                 return View();
             }
-          
+            
+
             return RedirectToAction("Index", "Home");
         }
+
+
     }
 }
