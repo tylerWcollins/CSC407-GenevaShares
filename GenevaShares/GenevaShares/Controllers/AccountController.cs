@@ -15,7 +15,7 @@ namespace GenevaShares.Controllers
 
         public AccountController()
         {
-            this.userService = new UserService();
+            this.userService = new UserService(new SHA256Encryptor());
         }
 
 

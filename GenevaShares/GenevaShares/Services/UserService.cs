@@ -11,8 +11,10 @@ namespace GenevaShares.Services
     {
 
         private GenevaSharesDbContext context;
-        public UserService()
+        private IEncryptor encryptor;
+        public UserService(IEncryptor encryptor)
         {
+            this.encryptor = encryptor;
             this.context = new GenevaSharesDbContext();
         }
 
@@ -25,6 +27,8 @@ namespace GenevaShares.Services
 
         public void Register(User user)
         {
+            user.Password = this.encryptor.Encrypt(user.Password);
+
             this.context.Users.Add(user);
             this.context.SaveChanges();
         }
