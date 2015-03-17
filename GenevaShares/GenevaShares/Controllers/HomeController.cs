@@ -8,6 +8,7 @@ namespace GenevaShares.Controllers
 {
     public class HomeController : Controller
     {
+        // GET: Hom
         public ActionResult Index()
         {
             return View();

@@ -1,5 +1,6 @@
 namespace GenevaShares.Data
 {
+    using GenevaShares.Migrations;
     using GenevaShares.Models;
     using System;
     using System.Data.Entity;
@@ -16,13 +17,15 @@ namespace GenevaShares.Data
         public GenevaSharesDbContext()
             : base("name=GenevaSharesDbContext")
         {
-            Database.SetInitializer<GenevaSharesDbContext>(new CreateDatabaseIfNotExists<GenevaSharesDbContext>());
+
+            Database.SetInitializer<GenevaSharesDbContext>(new MigrateDatabaseToLatestVersion<GenevaSharesDbContext, Configuration>());
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Posting> Postings { get; set; }
     }
 
     //public class MyEntity

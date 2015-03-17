@@ -15,7 +15,9 @@ namespace GenevaShares.Controllers
 
         public AccountController()
         {
-            this.userService = new UserService();
+            var encryptor = new SHA256Encyptor();
+            this.userService = new UserService(encryptor);
+
         }
 
 
@@ -58,6 +60,15 @@ namespace GenevaShares.Controllers
         [HttpPost]
         public ActionResult Register(User user)
         {
+
+            bool exists = this.userService.Exists(user.Username);
+
+            if (exists)
+            {
+                this.ModelState.AddModelError("", "Username already exists");
+                return View();
+            }
+
             try
             {
                 this.userService.Register(user);
