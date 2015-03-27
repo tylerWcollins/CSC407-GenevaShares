@@ -12,12 +12,12 @@ namespace GenevaShares.Controllers
     public class AccountController : Controller
     {
         private IUserService userService;
+        private IAuthService authService;
 
-        public AccountController()
+        public AccountController(IUserService userservice, IAuthService authService)
         {
-            var encryptor = new SHA256Encyptor();
-            this.userService = new UserService(encryptor);
-
+            this.userService = userservice;
+            this.authService = authService;
         }
 
 
@@ -34,7 +34,7 @@ namespace GenevaShares.Controllers
 
             if (isAuthenticated)
             {
-                FormsAuthentication.SetAuthCookie(model.Username, true);
+                this.authService.SetAuthCookie(model.Username, true);
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -47,7 +47,7 @@ namespace GenevaShares.Controllers
 
         public ActionResult Logout()
         {
-            FormsAuthentication.SignOut();
+            this.authService.SignOut();
             return RedirectToAction("Index", "Home");
         }
 
@@ -66,7 +66,7 @@ namespace GenevaShares.Controllers
             if (exists)
             {
                 this.ModelState.AddModelError("", "Username already exists");
-                return View();
+                return View("Register");
             }
 
             try

@@ -53,7 +53,16 @@ namespace GenevaShares.Services
 
         public bool Exists(string username)
         {
-            User user = this.context.Users.Where(x => x.Username.ToLower() == username.ToLower()).SingleOrDefault();
+            User user = null;
+
+            try
+            {
+                user = this.context.Users.Where(x => x.Username.ToLower() == username.ToLower()).SingleOrDefault();
+            }
+            catch (Exception exception)
+            {
+                var e = exception;
+            }
 
             if (user == null)
             {

@@ -1,6 +1,5 @@
 namespace GenevaShares.Migrations
 {
-    using GenevaShares.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -10,15 +9,11 @@ namespace GenevaShares.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "GenevaShares.Data.GenevaSharesDbContext";
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(GenevaShares.Data.GenevaSharesDbContext context)
         {
-
-            context.Postings.AddOrUpdate();
-
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

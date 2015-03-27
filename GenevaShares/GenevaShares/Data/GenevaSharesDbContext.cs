@@ -17,8 +17,7 @@ namespace GenevaShares.Data
         public GenevaSharesDbContext()
             : base("name=GenevaSharesDbContext")
         {
-
-            Database.SetInitializer<GenevaSharesDbContext>(new MigrateDatabaseToLatestVersion<GenevaSharesDbContext, Configuration>());
+            Database.SetInitializer<GenevaSharesDbContext>(new CreateDatabaseIfNotExists<GenevaSharesDbContext>());
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 

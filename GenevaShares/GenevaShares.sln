@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenevaShares", "GenevaShares\GenevaShares.csproj", "{D90DFE57-6E89-4C50-96B3-02B5CF4C271D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenevaShares.Tests", "GenevaShares.Tests\GenevaShares.Tests.csproj", "{71740AB4-B659-4C15-9CF3-C47283DEDA10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D90DFE57-6E89-4C50-96B3-02B5CF4C271D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D90DFE57-6E89-4C50-96B3-02B5CF4C271D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D90DFE57-6E89-4C50-96B3-02B5CF4C271D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71740AB4-B659-4C15-9CF3-C47283DEDA10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71740AB4-B659-4C15-9CF3-C47283DEDA10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71740AB4-B659-4C15-9CF3-C47283DEDA10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71740AB4-B659-4C15-9CF3-C47283DEDA10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
