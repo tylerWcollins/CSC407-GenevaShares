@@ -25,11 +25,20 @@ namespace GenevaShares.Data
 
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Posting> Postings { get; set; }
+
+        public virtual DbSet<Like> Likes { get; set;}
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Posting>()
+                            .HasMany(x => x.Likes)
+                            .WithRequired(x => x.Posting);
+               
+        }
+
     }
 
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
 }

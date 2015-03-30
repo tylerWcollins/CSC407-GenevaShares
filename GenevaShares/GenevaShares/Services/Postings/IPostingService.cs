@@ -16,5 +16,7 @@ namespace GenevaShares.Services
 
         void DeletePosting(int id);
 
+        void LikePosting(int id, string username);
+
     }
 }

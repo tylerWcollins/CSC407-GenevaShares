@@ -34,3 +34,6 @@ C:\Users\taylorj4\Desktop\Projects\GenevaShares\GenevaShares\obj\Debug\GenevaSha
 C:\Users\taylorj4\Desktop\Projects\GenevaShares\GenevaShares\obj\Debug\GenevaShares.csproj.GenerateResource.Cache
 C:\Users\taylorj4\Desktop\Projects\GenevaShares\GenevaShares\obj\Debug\GenevaShares.dll
 C:\Users\taylorj4\Desktop\Projects\GenevaShares\GenevaShares\obj\Debug\GenevaShares.pdb
+C:\Users\taylorj4\Desktop\Projects\GenevaShares\GenevaShares\obj\Debug\GenevaShares.csprojResolveAssemblyReference.cache
+C:\Users\taylorj4\Desktop\Projects\GenevaShares\GenevaShares\obj\Debug\GenevaShares.Migrations.AddLikes.resources
+C:\Users\taylorj4\Desktop\Projects\GenevaShares\GenevaShares\obj\Debug\GenevaShares.Migrations.Added_Relationship_Between_Posting_And_Like.resources

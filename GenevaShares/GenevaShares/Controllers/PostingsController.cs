@@ -25,6 +25,24 @@ namespace GenevaShares.Controllers
             return View(postings);
         }
 
+        [HttpPost]
+        public ActionResult Index(FormCollection collection)
+        {
+            int id = -1;
+            int.TryParse(collection["itemId"], out id);
+
+            if (id == -1)
+            {
+                return new HttpStatusCodeResult(403);
+            }
+            else
+            {
+                this.postingService.LikePosting(id, User.Identity.Name);
+            }
+
+            return RedirectToAction("Index");
+        }
+
         [HttpGet]
         public ActionResult Create()
         {

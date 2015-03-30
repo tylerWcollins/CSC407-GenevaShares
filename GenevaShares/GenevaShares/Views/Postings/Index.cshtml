@@ -23,30 +23,44 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Author)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id })
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <form action="/Postings/Index" method="POST" id="form-@item.Id">
+                    @if (item.Likes.Where(x => x.Username.ToLower() == User.Identity.Name.ToLower()).ToList().Count > 0)
+                    {
+                        <p>You liked this!</p>
+                    }
+                    else
+                    {
+                        <input type="hidden" name="itemId" value="@item.Id" />
+                        <input type="submit" value="Like" class="form-submit" data-item-number="@item.Id">
+                    }
+                </form>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
 
-            @if (item.Author.ToLower() == HttpContext.Current.User.Identity.Name.ToLower())
-            {
-                <span> | </span>
-                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-            }
+                @if (item.Author.ToLower() == HttpContext.Current.User.Identity.Name.ToLower())
+                {
+                    <span> | </span>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                }
 
-  
-        </td>
-    </tr>
-}
+
+            </td>
+        </tr>
+    }
 
 </table>

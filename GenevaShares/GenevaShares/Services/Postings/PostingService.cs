@@ -18,6 +18,8 @@ namespace GenevaShares.Services.Postings
 
         public List<Posting> GetPostings()
         {
+            var postings = this.context.Postings.ToList();
+
             return this.context.Postings.ToList();
         }
 
@@ -36,6 +38,19 @@ namespace GenevaShares.Services.Postings
         {
             var posting = this.context.Postings.Where(x => x.Id == id).SingleOrDefault();
             this.context.Postings.Remove(posting);
+            this.context.SaveChanges();
+        }
+
+
+        public void LikePosting(int id, string username)
+        {
+            var posting = this.GetPostingById(id);
+            var like = new Like
+            {
+                Username = username,
+                Posting = posting
+            };
+            posting.Likes.Add(like);
             this.context.SaveChanges();
         }
     }

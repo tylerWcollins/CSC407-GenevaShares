@@ -141,7 +141,16 @@
     <Compile Include="Migrations\201503270121317_test.Designer.cs">
       <DependentUpon>201503270121317_test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503292358222_AddLikes.cs" />
+    <Compile Include="Migrations\201503292358222_AddLikes.Designer.cs">
+      <DependentUpon>201503292358222_AddLikes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503300014026_Added_Relationship_Between_Posting_And_Like.cs" />
+    <Compile Include="Migrations\201503300014026_Added_Relationship_Between_Posting_And_Like.Designer.cs">
+      <DependentUpon>201503300014026_Added_Relationship_Between_Posting_And_Like.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Like.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\Posting.cs" />
     <Compile Include="Models\User.cs" />
@@ -156,6 +165,10 @@
     <Compile Include="Services\Users\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\GenevaShares2.mdf" />
+    <Content Include="App_Data\GenevaShares2_log.ldf">
+      <DependentUpon>GenevaShares2.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -203,12 +216,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503270121317_test.resx">
       <DependentUpon>201503270121317_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503292358222_AddLikes.resx">
+      <DependentUpon>201503292358222_AddLikes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503300014026_Added_Relationship_Between_Posting_And_Like.resx">
+      <DependentUpon>201503300014026_Added_Relationship_Between_Posting_And_Like.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

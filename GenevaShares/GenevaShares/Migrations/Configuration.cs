@@ -1,6 +1,8 @@
 namespace GenevaShares.Migrations
 {
+    using GenevaShares.Models;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -26,6 +28,23 @@ namespace GenevaShares.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            var postings = new List<Posting>();
+
+            for (var i = 0; i < 30; i++)
+            {
+                postings.Add(
+                    new Posting
+                    {
+                        Author = "Jeff",
+                        Description = "Test Posting Description" + i,
+                        Title = "Test Posting Title" + i
+                    });
+            }
+
+            context.Postings.AddRange(postings);
+
+            base.Seed(context);
         }
     }
 }
